@@ -12,3 +12,14 @@
 >Click Here</div>
 
 <%= @hello %>
+
+
+<div>
+  <h2>Enter your name</h2>
+  <input
+    type="text"
+    value="<%= @words %>"
+    data-reflex="keyup->WelcomeReflex#word"
+  >
+  <p>Reverse name: <%= @words.reverse %></p>
+</div>
