@@ -1,0 +1,25 @@
+<div>Welcome#index</div>
+
+
+<!--
+  Define a div that's clickable, When clicked,
+  it calls `greetings` function in WelcomeReflex,
+  that changes the instance variable 'hello'
+-->
+
+<div
+  data-reflex="click->WelcomeReflex#greetings"
+>Click Here</div>
+
+<%= @hello %>
+
+
+<div>
+  <h2>Enter your name</h2>
+  <input
+    type="text"
+    value="<%= @words %>"
+    data-reflex="keyup->WelcomeReflex#word"
+  >
+  <p>Reverse name: <%= @words.reverse %></p>
+</div>
