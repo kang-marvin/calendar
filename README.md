@@ -13,7 +13,8 @@ Things you may want to cover:
   - 2.6.3
 
 * System dependencies
-  - stimulus reflex
+  - stimulus reflex v3.2.1
+  - stimulus js v1.22.4
 
 * Configuration
 
