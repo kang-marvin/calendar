@@ -6,8 +6,13 @@
   --main-container-padding-horizontal: 5rem;
   --main-container-padding-vertical: 2rem;
 
-  --main-color: white;
-  --main-background-color: rgb(49, 49, 49);
+  // Dark mode
+  // --main-color: white;
+  // --main-background-color: rgb(49, 49, 49);
+
+  // Light Mode
+  --main-color: rgb(49, 49, 49);
+  --main-background-color: white;
 }
 
 body,
@@ -26,7 +31,7 @@ body,
   padding-right: var(--main-container-padding-horizontal);
 }
 
-*[class^='col']
+*[class^='col'],
 *[class^='col-'] {
   margin: .5rem;
 }
@@ -43,7 +48,7 @@ body,
 .calendar-backward {
   font-size: larger;
   color: var(--main-color);
-  transform: rotate(90deg);
+  border: 1px solid lightblue;
 }
 
 .divider-div {
