@@ -1,10 +1,52 @@
-<!-- Sample demo of Bootstrap -->
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+
+<!-- Container -->
+<div class="container">
+
+  <!-- Date and Time Object -->
+  <div class="card card-without-bottom-border">
+    <div class="card-body">
+      <div class="current-timestamp-div">
+        <h1 class="card-title display-4"><%= @timeObject[:currentTime] %></h1>
+        <h6 class="card-subtitle text-muted"><%= @timeObject[:meridiem] %></h6>
+      </div>
+      <div class="current-date-div">
+        <p class="card-text mb-2" style="color: lightblue">
+          <%= @dateObject[:day] %>,
+          <%= @dateObject[:month] %> <%= @dateObject[:date] %>,
+          <%= @dateObject[:year] %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- Calender Object -->
+    <div class="card-body container-fluid">
+      <div class="row">
+        <h3 class="col-2 card-text">
+            <%= @dateObject[:month] %> <%= @dateObject[:date] %>
+        </h3>
+        <% (@days_of_the_week.count - 4).times do |c| %>
+          <div class="col card-text"></div>
+        <% end %>
+
+
+        <button type="button" class="col btn calendar-forward">
+          <h1> < </h1>
+        </button>
+        <button type="button" class="col btn calendar-backward">
+            <h1> > </h1>
+        </button>
+      </div>
+
+      <div class="divider-div"></div>
+
+      <div class="row">
+        <% @days_of_the_week.each do |day| %>
+          <div class="card-title col card-text day-of-week"><%= day %></div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
 </div>
