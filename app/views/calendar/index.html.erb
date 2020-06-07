@@ -47,6 +47,21 @@
         <% end %>
       </div>
 
+      <% isInCurrentMonth = false %>
+      <% @days_of_the_month.in_groups_of(@days_of_the_week.count).each do |week| %>
+      <div class="row">
+        <% week.each do |day| %>
+            <% isInCurrentMonth = is_day_of_current_month(isInCurrentMonth, day) %>
+
+            <% if isInCurrentMonth %>
+              <div class="card-title col card-text day-of-week"><%= day %></div>
+            <% else %>
+              <div class="card-title col card-text day-of-week text-muted"><%= day %></div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+
     </div>
   </div>
 </div>
