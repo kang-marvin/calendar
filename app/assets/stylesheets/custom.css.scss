@@ -1,3 +1,61 @@
 /** Override bootstrap styling */
 
 @import 'bootstrap/dist/css/bootstrap';
+
+:root {
+  --main-container-padding-horizontal: 5rem;
+  --main-container-padding-vertical: 2rem;
+
+  // Dark mode
+  // --main-color: white;
+  // --main-background-color: rgb(49, 49, 49);
+
+  // Light Mode
+  --main-color: rgb(49, 49, 49);
+  --main-background-color: white;
+}
+
+body,
+.container {
+  background-color: black;
+}
+
+.card {
+  color: var(--main-color);
+  background-color: var(--main-background-color);
+}
+
+.container {
+  padding-top: var(--main-container-padding-vertical);
+  padding-left: var(--main-container-padding-horizontal);
+  padding-right: var(--main-container-padding-horizontal);
+}
+
+*[class^='col'],
+*[class^='col-'] {
+  margin: .5rem;
+}
+
+.current-timestamp-div {
+  display: flex;
+}
+
+.card-without-bottom-border {
+  border-bottom-style: none;
+}
+
+.calendar-forward,
+.calendar-backward {
+  font-size: larger;
+  color: var(--main-color);
+  border: 1px solid lightblue;
+}
+
+.divider-div {
+  margin-top: 1rem;
+}
+
+.day-of-week {
+  font-size: larger;
+  padding-left: 2rem;
+}
